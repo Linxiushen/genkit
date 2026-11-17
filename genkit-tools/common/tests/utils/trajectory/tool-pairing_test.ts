@@ -102,6 +102,7 @@ describe('trajectory tool-pairing helpers', () => {
       {
         partition: makePartition(toolSpans),
         claimedToolSpanIds: new Set(),
+        resumeDecisions: [],
         toolResponses: [],
       }
     );
@@ -141,6 +142,7 @@ describe('trajectory tool-pairing helpers', () => {
       {
         partition: makePartition([v2Tool]),
         claimedToolSpanIds: new Set(),
+        resumeDecisions: [],
         toolResponses: [],
       }
     );
@@ -183,6 +185,7 @@ describe('trajectory tool-pairing helpers', () => {
       {
         partition: makePartition([skewedTool], parentMap),
         claimedToolSpanIds: new Set(),
+        resumeDecisions: [],
         toolResponses: [
           {
             part: {
@@ -232,6 +235,7 @@ describe('trajectory tool-pairing helpers', () => {
       {
         partition: makePartition([failedTool, pendingTool]),
         claimedToolSpanIds: new Set(),
+        resumeDecisions: [],
         toolResponses: [],
       }
     );

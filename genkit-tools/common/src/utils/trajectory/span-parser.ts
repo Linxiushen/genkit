@@ -22,6 +22,8 @@ import type {
   Part,
   SpanData,
   ToolDefinition,
+  ToolRequestPart,
+  ToolResponsePart,
   TrajectoryStep,
 } from '../../types/index.js';
 import {
@@ -68,6 +70,10 @@ export interface ParsedSpanInput {
   tools?: Partial<ToolDefinition>[];
   messages?: MessageData[];
   message?: MessageData;
+  resume?: {
+    respond?: ToolResponsePart[];
+    restart?: ToolRequestPart[];
+  };
 }
 
 /** Parsed structure of a span's `genkit:output` JSON attribute. */
